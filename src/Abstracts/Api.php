@@ -25,24 +25,9 @@ abstract class Api implements \TigranMaestro\OpenExchangeRatesPHPClient\Interfac
 
     use WrapperAware;
 
-    public function __construct($url)
+    public function __construct()
     {
-        $url = trim((string)$url);
-        if (strlen($url) < 4) {
-            throw new \InvalidArgumentException(
-                'URL must be a string of at least four characters in length'
-            );
-        }
-        $url = (isset(parse_url($url)['scheme'])) ? $url : "http://$url";
-        $filteredUrl = filter_var($url, FILTER_VALIDATE_URL);
-        if (!$filteredUrl) {
-            throw new \InvalidArgumentException(
-                'You provided an invalid URL: ' . $url
-            );
-        }
-        $url = $filteredUrl;
 
-        $this->url = $url;
     }
 
     /**

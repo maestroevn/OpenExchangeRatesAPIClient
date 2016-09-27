@@ -1,4 +1,3 @@
-
 <?php
 
 namespace TigranMaestro\OpenExchangeRatesPHPClient\Traits;

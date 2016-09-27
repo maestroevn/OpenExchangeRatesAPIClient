@@ -12,17 +12,14 @@ class Rate extends Entity
 {
     /**
      * Rate constructor.
-     * @param array $data
+     * @param string $currencyCode
+     * @param double $rate
      */
-    public function __construct(array $data)
+    public function __construct($currencyCode, $rate)
     {
-        parent::__construct($data);
-
-        $keys = array_keys($data);
-        $currencyCode = $keys[0];
-
+        parent::__construct([]);
         $this->data['currency_code'] = $currencyCode;
-        $this->data['rate'] = $data[$currencyCode];
+        $this->data['rate'] = $rate;
     }
 
     /**

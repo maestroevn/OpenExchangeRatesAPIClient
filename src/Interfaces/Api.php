@@ -2,12 +2,16 @@
 
 namespace TigranMaestro\OpenExchangeRatesPHPClient\Interfaces;
 
-//use Swader\Diffbot\Entity\EntityIterator;
+use TigranMaestro\OpenExchangeRatesPHPClient\Abstracts\Entity;
 
+/**
+ * Interface Api
+ * @package TigranMaestro\OpenExchangeRatesPHPClient\Interfaces
+ */
 interface Api
 {
     /**
-     * @return EntityIterator
+     * @return Entity
      */
     public function call();
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Swader\OpenExchangeRatesPHPClient\Entity;
+namespace TigranMaestro\OpenExchangeRatesPHPClient\Entity;
 
 use TigranMaestro\OpenExchangeRatesPHPClient\Abstracts\Entity;
 use TigranMaestro\OpenExchangeRatesPHPClient\Entity\Rate;
@@ -23,10 +23,11 @@ class Latest extends Entity
     public function __construct(array $data)
     {
         parent::__construct($data);
-        foreach ($this->data['rates'] as $rate) {
-            $this->rates[] = new Rate($rate);
+        foreach ($this->data['rates'] as $currencyCode => $rate) {
+            $this->rates[] = new Rate($currencyCode, $rate);
         }
         $this->data['rates'] = $this->rates;
+        unset($this->rates);
     }
 
     /**

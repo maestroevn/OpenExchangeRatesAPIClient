@@ -18,14 +18,14 @@ class Latest extends Api
 
 
     /**
-     * @return \Swader\OpenExchangeRatesPHPClient\Entity\Latest
+     * @return \TigranMaestro\OpenExchangeRatesPHPClient\Entity\Latest
      */
     public function call()
     {
         $response = $this->wrapper->getHttpClient()->get($this->buildUrl());
         $arr = json_decode($response->getBody(), true, 512, 1);
 
-        $entity = new \Swader\OpenExchangeRatesPHPClient\Entity\Latest($arr);
+        $entity = new \TigranMaestro\OpenExchangeRatesPHPClient\Entity\Latest($arr);
 
         return $entity;
     }

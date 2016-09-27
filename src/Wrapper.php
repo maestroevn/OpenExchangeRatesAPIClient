@@ -131,9 +131,9 @@ class Wrapper
      * @param string $url Url to analyze
      * @return Latest
      */
-    public function createLatestAPI($url)
+    public function createLatestAPI()
     {
-        $api = new Latest($url);
+        $api = new Latest();
 
         return $api->registerWrapper($this);
     }
