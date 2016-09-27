@@ -1,5 +1,5 @@
 {
-    "name": "tigranmaestro/OpenExchangeRatesAPIClient",
+    "name": "tigranmaestro/open-exchange-rates-api-client",
     "description": "PHP library to consume OpenExchangeRates API",
     "keywords": [
         "api",
