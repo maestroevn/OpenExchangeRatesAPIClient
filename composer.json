@@ -32,6 +32,5 @@
         "psr-4": {
             "TigranMaestro\\OpenExchangeRatesPHPClient\\Test\\": "tests"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
