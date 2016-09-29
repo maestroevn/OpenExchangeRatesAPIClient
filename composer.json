@@ -33,5 +33,5 @@
             "TigranMaestro\\OpenExchangeRatesPHPClient\\Test\\": "tests"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "stable"
 }
