@@ -29,5 +29,6 @@
         "psr-4": {
             "TigranMaestro\\OpenExchangeRatesPHPClient\\Test\\": "tests"
         }
-    }
+    },
+    "version": "1.0.0"
 }
